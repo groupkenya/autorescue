@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html><head lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="author" content="Group Kenya - info@groupkenya.com">
+<meta name="author" content="Wachenya Auto Garage - info@wachenya.co.ke">
+<link rel='shortcut icon' type='image/x-icon' href='img/icon.png' />
+<title>AutoRescue</title></head>
+
+<body><div class="appcontent nocontext"></div></body>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<script type="text/javascript">
+if(localStorage.getItem('appjst')==null){localStorage.setItem('appjst','0');localStorage.setItem('appcsst','0');}
+//css loader
+if(localStorage.getItem('appcss')==null){
+var appStyles=document.createElement('link');appStyles.setAttribute('type','text/css');appStyles.setAttribute('rel','stylesheet');
+appStyles.setAttribute('href','css/app.css');document.head.appendChild(appStyles);}
+else{var appStyles=document.createElement('style');appStyles.setAttribute('type','text/css');
+appStyles.innerHTML=atob(localStorage.getItem('appcss'));document.head.appendChild(appStyles);}
+//js loader
+if(localStorage.getItem('appjs')==null){var appScript=document.createElement('script');appScript.setAttribute('type','text/javascript');
+appScript.setAttribute('src','js/app.js');document.body.appendChild(appScript);}
+else{try{eval(atob(localStorage.getItem('appjs')));}catch(e){var appScript=document.createElement('script');
+appScript.setAttribute('type','text/javascript');appScript.setAttribute('src','js/app.js');document.body.appendChild(appScript);}}
+</script>
+
+</html>
